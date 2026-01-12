@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>_5lab</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Lab.BLL\**" />
+    <Compile Remove="LAB.PL\**" />
+    <Compile Remove="TestLab\**" />
+    <EmbeddedResource Remove="Lab.BLL\**" />
+    <EmbeddedResource Remove="LAB.PL\**" />
+    <EmbeddedResource Remove="TestLab\**" />
+    <None Remove="Lab.BLL\**" />
+    <None Remove="LAB.PL\**" />
+    <None Remove="TestLab\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="students.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
