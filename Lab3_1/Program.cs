@@ -57,7 +57,7 @@ namespace Lab3_1
             Console.Write("Прізвище: ");
             string surname = Console.ReadLine();
 
-            //валідація ID регуляркою (наприклад, KB123456)
+            //ЗАВДАННЯ валідація ID регуляркою (наприклад, KB123456)
             string id;
             while (true)
             {
@@ -96,8 +96,7 @@ namespace Lab3_1
                 database[i].SpecificAction();
             }
         }
-
-        //3-й курс, народжені влітку
+        // ЗАВДАННЯ    Обчислити кількість студентів 3-го курсу, які народилися влітку
         static void RunVariantTask()
         {
             Console.WriteLine("\nРезультати пошуку (3 курс, літо)");

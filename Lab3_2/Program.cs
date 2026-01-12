@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections;       // Треба для ArrayList
-using System.Collections.Generic; // Треба для List<T>
+using System.Collections;       //ArrayList
+using System.Collections.Generic; //List<T>
 using System.Linq; 
 
 namespace Lab3_2
@@ -59,8 +59,8 @@ namespace Lab3_2
             arrayList.Add(s1);
             arrayList.Add(s2);
             arrayList.Add(s3);
-            arrayList.Add("Якийсь лівий текст"); // сміття
-            arrayList.Remove("Якийсь лівий текст"); // Видалимо сміття
+            arrayList.Add("текст"); 
+            arrayList.Remove("текст"); 
 
             // Видалення
             Console.WriteLine("Видаляємо s2 зі списку...");
@@ -70,7 +70,6 @@ namespace Lab3_2
             Console.WriteLine("Вміст ArrayList:");
             foreach (object item in arrayList)
             {
-                //  tse object
                 if (item is Student s)
                 {
                     Console.WriteLine(s);

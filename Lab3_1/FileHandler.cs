@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Lab3_1
 {
+    // ЗАВДАННЯ 5     Операції роботи з файлами в окремому класі
     public class FileHandler
     {
         private string _filePath;
@@ -12,11 +13,11 @@ namespace Lab3_1
         {
             _filePath = path;
         }
-
+        // ЗАВДАННЯ 3   Застосування класів потокового виведення 
         //запис масиву у файл
         public void SaveToFile(Person[] people, int count)
         {
-            using (StreamWriter sw = new StreamWriter(_filePath, false))
+            using (StreamWriter sw = new StreamWriter(_filePath, false)) // false означає перезапис файлу
             {
                 for (int i = 0; i < count; i++)
                 {
@@ -48,14 +49,14 @@ namespace Lab3_1
             Console.WriteLine("Дані успішно збережено у файл!");
         }
 
-        //читання з файлу. Повертає масив і кількість через out параметр
+        //ЗАВДАННЯ 3   читання з файлу. Повертає масив і кількість через out параметр
         public Person[] LoadFromFile(out int loadedCount)
         {
             Person[] tempArray = new Person[100]; //максимум 100, бо колекції не можна
             loadedCount = 0;
 
             if (!File.Exists(_filePath)) return tempArray;
-
+            
             using (StreamReader sr = new StreamReader(_filePath))
             {
                 string line;
